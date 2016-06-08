@@ -16,11 +16,8 @@
 				<div class="box-body">
 					<div class="col-lg-12  connectedSortable">
 						<div class="row">
-							<div class="col-lg-6">
-								<canvas id="timePeople"></canvas>
-							</div>
-							<div class="col-lg-6">
-								<canvas id="sexPeople"></canvas>
+							<div class="col-lg-12">
+								<canvas id="timePeople" width="400px;"></canvas>
 							</div>
 						</div>
 						<br>
