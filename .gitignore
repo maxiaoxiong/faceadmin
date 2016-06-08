@@ -4,3 +4,9 @@
 Homestead.yaml
 Homestead.json
 .env
+/time
+/tests
+/gaze
+/num
+/pose
+/result

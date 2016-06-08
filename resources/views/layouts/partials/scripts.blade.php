@@ -28,9 +28,11 @@
 
 <script>
     var ctx_timePeople = document.querySelector('#timePeople').getContext('2d');
-//    var ctx_sexPeople = document.querySelector('#sexPeople').getContext('2d');
+    var ctx_sexPeople = document.querySelector('#sexPeople').getContext('2d');
+    var ctx_smilePeople = document.querySelector('#smilePeople').getContext('2d');
+    var ctx_seeTimePeople = document.querySelector('#seeTimePeople').getContext('2d');
+//    var ctx_exaPeople = document.querySelector('#exaPeople').getContext('2d');
     var ctx_agePeople = document.querySelector('#agePeople').getContext('2d');
-    var ctx_exaPeople = document.querySelector('#exaPeople').getContext('2d');
 
     var timePeople = new Chart(ctx_timePeople, {
         type: 'line',
@@ -60,56 +62,7 @@
         }
     });
 
-//    var sexPeople = new Chart(ctx_sexPeople,{
-//        type: 'bar',
-//        data: {
-//            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-//            datasets: [{
-//                label: "男",
-//                fill: true,
-//                lineTension: 0.1,
-//                backgroundColor: "rgba(75,192,192,0.8)",
-//                borderColor: "rgba(75,192,192,1)",
-//                borderCapStyle: 'butt',
-//                borderDash: [],
-//                borderDashOffset: 0.5,
-//                borderJoinStyle: 'miter',
-//                pointBorderColor: "rgba(75,192,192,1)",
-//                pointBackgroundColor: "#000",
-//                pointBorderWidth: 2,
-//                pointHoverRadius: 6,
-//                pointHoverBackgroundColor: "rgba(75,192,192,1)",
-//                pointHoverBorderColor: "rgba(220,220,220,1)",
-//                pointHoverBorderWidth: 2,
-//                pointRadius: 1,
-//                pointHitRadius: 10,
-//                data: [65, 59, 80, 81, 56, 55, 40],
-//            },
-//                {
-//                    label: "女",
-//                    fill: true,
-//                    lineTension: 0.1,
-//                    backgroundColor: "rgba(0,0,192,0.8)",
-//                    borderColor: "rgba(75,192,192,1)",
-//                    borderCapStyle: 'butt',
-//                    borderDash: [],
-//                    borderDashOffset: 0.5,
-//                    borderJoinStyle: 'miter',
-//                    pointBorderColor: "rgba(75,192,192,1)",
-//                    pointBackgroundColor: "#000",
-//                    pointBorderWidth: 2,
-//                    pointHoverRadius: 6,
-//                    pointHoverBackgroundColor: "rgba(75,192,192,1)",
-//                    pointHoverBorderColor: "rgba(220,220,220,1)",
-//                    pointHoverBorderWidth: 2,
-//                    pointRadius: 1,
-//                    pointHitRadius: 10,
-//                    data: [60, 65, 70, 85, 50, 50, 45   ],
-//                }]
-//        }
-//    });
-
-    var agePeople = new Chart(ctx_agePeople,{
+    var seeTimePeople = new Chart(ctx_seeTimePeople,{
         type: 'polarArea',
         data: {
             datasets: [{
@@ -118,49 +71,107 @@
                     16,
                     7,
                     3,
-                    14
+                    14,
+                    8,
+                    12
                 ],
                 backgroundColor: [
                     "#FF6384",
                     "#4BC0C0",
                     "#FFCE56",
                     "#E7E9ED",
-                    "#36A2EB"
+                    "#36A2EB",
+                    "red",
+                    "blue"
                 ],
-                label: 'My dataset' // for legend
+                label: '注视时长图' // for legend
             }],
             labels: [
-                "Red",
-                "Green",
-                "Yellow",
-                "Grey",
-                "Blue"
+                "1-10",
+                "11-20",
+                "21-30",
+                "31-40",
+                "41-50",
+                "51-60",
+                ">60"
+            ]
+        }
+    });
+    var smilePeople = new Chart(ctx_smilePeople,{
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    11,
+                    16,
+                ],
+                backgroundColor: [
+                    "#FF6384",
+                    "#4BC0C0",
+
+                ],
+                label: '注视时长图' // for legend
+            }],
+            labels: [
+                "1-10",
+                "11-20",
+            ]
+        }
+    });
+    var agePeople = new Chart(ctx_agePeople,{
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    11,
+                    16,
+                    7,
+                    3,
+                    14,
+                    8,
+                    12
+                ],
+                backgroundColor: [
+                    "#FF6384",
+                    "#4BC0C0",
+                    "#FFCE56",
+                    "#E7E9ED",
+                    "#36A2EB",
+                    "red",
+                    "blue"
+                ],
+                label: '年龄图' // for legend
+            }],
+            labels: [
+                "1-10",
+                "11-20",
+                "21-30",
+                "31-40",
+                "41-50",
+                "51-60",
+                ">60"
+            ]
+        }
+    });
+    var sexPeople = new Chart(ctx_sexPeople,{
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    11,
+                    16
+                ],
+                backgroundColor: [
+                    "#FF6384",
+                    "#4BC0C0"
+                ],
+                label: '性别图' // for legend
+            }],
+            labels: [
+                "男",
+                "女"
             ]
         }
     });
 
-    var myPieChart = new Chart(ctx_exaPeople,{
-        type: 'pie',
-        data: {
-            labels: [
-                "Red",
-                "Green",
-                "Yellow"
-            ],
-            datasets: [
-                {
-                    data: [300, 50, 100],
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ],
-                    hoverBackgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                        "#FFCE56"
-                    ]
-                }]
-        },
-    });
 </script>

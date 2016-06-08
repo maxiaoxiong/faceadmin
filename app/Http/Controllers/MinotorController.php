@@ -13,7 +13,7 @@ class MinotorController extends Controller
 {
     public function starting()
     {
-        $process = new Process('/home/xiongzai/LZQ_face/CLM-framework/bin/MultiTrackCLM');
+        $process = new Process('~/Muti-Face/bin/MultiTrackCLM -f ~/Muti-Face/videos/multi_face.avi');
         $process->run();
         if(!$process->isSuccessful()){
             throw new ProcessFailedException($process);
